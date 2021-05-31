@@ -24,6 +24,14 @@ In order to set the minimum sizes for the window and txt_edit, you just need to 
 
 If you want both the buttons in the same column then you’ll need to create a Frame widget called fr_buttons. According to the above-shown sketch, the two buttons should be stacked vertically inside of this frame, having btn_open on top. This can be done either by .grid() or .pack() geometry manager. For now, you’ll just need to stick with .grid() as it is easier to work with it.
 
+
+Output
+
+![image](https://user-images.githubusercontent.com/22562694/120153189-0be6c000-c20c-11eb-879c-755bcc0781a8.png)
+
+As you can see in the output, we have a basic text editor application in which we can write something and then save the text in a new file or use the Open button to open a file in the editor and then edit it.
+
+
 1. Creating all the needed widgets
 
 The code snippet that is used is as follows:
@@ -151,9 +159,3 @@ Line 10 extracts the text from txt_edit with .get() method and assigns it to the
 Line 11 writes text to the output file.
 
 Line 12 updates the title of the window so that the new file path is displayed in the window title.
-
-Output
-
-![image](https://user-images.githubusercontent.com/22562694/120153189-0be6c000-c20c-11eb-879c-755bcc0781a8.png)
-
-As you can see in the output, we have a basic text editor application in which we can write something and then save the text in a new file or use the Open button to open a file in the editor and then edit it.
