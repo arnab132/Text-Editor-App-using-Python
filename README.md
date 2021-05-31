@@ -31,16 +31,23 @@ The code snippet that is used is as follows:
 import tkinter as tk
 
 window = tk.Tk()
+
 window.title("Text Editor Application")
 
 window.rowconfigure(0, minsize=900, weight=1)
+
 window.columnconfigure(1, minsize=900, weight=1)
 
 txt_edit = tk.Text(window)
+
 fr_buttons = tk.Frame(window)
+
 btn_open = tk.Button(fr_buttons, text="Open")
+
 btn_save = tk.Button(fr_buttons, text="Save As...")
+
 Explanation of the above code:
+
 The first command is used to import the tkinter.
 
 Then the next two lines are used to create a new window with the title "Text Editor Application".
@@ -50,17 +57,21 @@ The next two lines of code are used to set the row and column configurations.
 Then the lines from 9 to 12 will create the four widgets you’ll need for the text box, the frame, and the open and save buttons.
 
 window.rowconfigure(0, minsize=900, weight=1)
+
 The above-given line in the code indicates The minsize parameter of .rowconfigure() is set to 900 and weight is set to 1.The first argument is 0, which is used to set the height of the first row to 900 pixels and makes sure that the height of the row grows proportionally to the height of the window. There’s only one row in the application layout, so these settings are applied to the entire window.
 
 Then take a look at this line in the code :
 
 window.columnconfigure(1, minsize=900, weight=1)
+
 In the above code the .columnconfigure() to set the width and weight attributes of the column with index 1 to 900 and 1, respectively. Keep it in mind that, row and column indices are zero-based, so these settings apply only to the second column. By configuring the second column, the text box will expand and contract naturally when the window is resized, while the column containing the buttons will always remain at a fixed width.
 
 2.Creation of Application Layout
 
 btn_open.grid(row=0, column=0, sticky="ew", padx=5, pady=5)
+
 btn_save.grid(row=1, column=0, sticky="ew", padx=5)
+
 The above two lines of code will create a grid with two rows and one column in the fr_buttons frame since both btn_open and btn_save have their master attribute set to fr_buttons. btn_open is put in the first row and btn_save will be in the second row so that btn_open appears above btn_save in the layout, as planned in the above sketch.
 
 The btn_open and btn_save both have their sticky attributes set to "ew", which forces the buttons to expand horizontally in both directions and in order to fill the entire frame. It makes sure both buttons are of the same size.
@@ -70,7 +81,9 @@ You place 5 pixels of padding around each button just by setting the padx and pa
 Now the fr_buttons is laid out and ready to go, you can just set up the grid layout for the rest of the window now:
 
 fr_buttons.grid(row=0, column=0, sticky="ns")
+
 txt_edit.grid(row=0, column=1, sticky="nsew")
+
 These above two lines of code are used to create a grid with one row and two columns for window. You place fr_buttons in the first column and txt_edit in the second column so that fr_buttons appears to the left of txt_edit in the window layout.
 
 The sticky parameter for fr_buttons will be set to "ns", which forces the whole frame to expand vertically and fill the entire height of its column. txt_edit is used to fill its entire grid cell because you set its sticky parameter to "nsew", which forces it to expand in every direction.
@@ -95,6 +108,7 @@ def open_file():
     window.title(f"Text Editor Application - {filepath}")
 
 Explanation:
+
 The Lines from 3 to 5 use the askopenfilename dialog from the tkinter.filedialog module to display a file open dialog and store the selected file path to filepath.
 
 Lines 6 and 7 checks to see if the user closes the dialog box or clicks the Cancel button. If so, then filepath will be None, and the function will return without executing any of the code to read the file and set the text of txt_edit.
@@ -143,4 +157,3 @@ Output
 ![image](https://user-images.githubusercontent.com/22562694/120153189-0be6c000-c20c-11eb-879c-755bcc0781a8.png)
 
 As you can see in the output, we have a basic text editor application in which we can write something and then save the text in a new file or use the Open button to open a file in the editor and then edit it.
-
