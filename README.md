@@ -137,3 +137,10 @@ Line 10 extracts the text from txt_edit with .get() method and assigns it to the
 Line 11 writes text to the output file.
 
 Line 12 updates the title of the window so that the new file path is displayed in the window title.
+
+Output
+
+![image](https://user-images.githubusercontent.com/22562694/120153189-0be6c000-c20c-11eb-879c-755bcc0781a8.png)
+
+As you can see in the output, we have a basic text editor application in which we can write something and then save the text in a new file or use the Open button to open a file in the editor and then edit it.
+
