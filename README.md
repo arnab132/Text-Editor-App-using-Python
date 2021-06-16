@@ -12,7 +12,7 @@ Second one is a Button widget called btn_save for saving a file
 
 Third, there is a Text widget called txt_edit for creating and editing any text file.
 
-The arrangement of three widgets is done in a way such that the two buttons are on the left-hand side of the window, and the text box is on the right-hand side. The minimum height of the whole window should be 900 pixels and txt_edit should have a minimum width of 900 pixels. And The whole layout should be responsive if the window is resized, then txt_edit is resized as well. The width of the Frame that holds the buttons should not change.
+The arrangement of three widgets is done in a way such that the two buttons are on the left-hand side of the window, and the text box is on the right-hand side. The Minimum height of the whole window should be 900 pixels and txt_edit should have a minimum width of 900 pixels. And The whole layout should be responsive if the window is resized, then txt_edit is resized as well. The width of the Frame that holds the buttons should not change.
 
 The desired layout of the Text Editor Application can be achieved using the .grid() geometry manager. And this layout contains a single row and two columns:
 
